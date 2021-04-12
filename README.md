@@ -7,6 +7,9 @@ $ docker run -d --rm -p 8080:8080 -v "${PWD}"/etc:/etc/trino --name trino trinod
 # connect mongodb
 $  docker exec -it trino trino --catalog mongodb --schema local
 > select * from startup_log
+
+# connect kafka
+$ docker exec -it trino trino --catalog kafka --schema eventhub
 ```
 
 ## Ref
