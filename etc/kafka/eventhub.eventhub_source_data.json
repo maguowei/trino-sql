@@ -1,0 +1,51 @@
+{
+    "tableName": "eventhub_source_data",
+    "schemaName": "eventhub",
+    "topicName": "eventhub_source_data",
+    "message": {
+        "dataFormat":"json",
+        "fields": [
+            {
+                "name": "specversion",
+                "mapping": "specversion",
+                "type": "VARCHAR"
+            },
+            {
+                "name": "id",
+                "mapping": "id",
+                "type": "VARCHAR"
+            },
+            {
+                "name": "source",
+                "mapping": "source",
+                "type": "VARCHAR"
+            },
+            {
+                "name": "type",
+                "mapping": "type",
+                "type": "VARCHAR"
+            },
+            {
+                "name": "subject",
+                "mapping": "subject",
+                "type": "VARCHAR"
+            },
+            {
+                "name": "time",
+                "mapping": "time",
+                "type": "TIMESTAMP WITH TIME ZONE",
+                "dataFormat": "iso8601"
+            },
+            {
+                "name": "feed_id",
+                "mapping": "data/feed_id",
+                "type": "BIGINT"
+            },
+            {
+                "name": "data",
+                "mapping": "data",
+                "type": "VARCHAR"
+            }
+        ]
+    }
+}
